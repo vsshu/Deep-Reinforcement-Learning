@@ -11,7 +11,7 @@ from stable_baselines3.common.evaluation import evaluate_policy
 import sys
 
 import tensorflow as tf
-#from stable_baselines.common import set_global_seeds
+from stable_baselines.common import set_global_seeds
 
 import pprint
 
@@ -30,7 +30,7 @@ def make_env(rank, seed=0):
         
         env.seed(seed + rank)
         return env
-    #set_global_seeds(seed)
+    set_global_seeds(seed)
     return _init
 
 if __name__ == '__main__':
