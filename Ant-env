@@ -1,0 +1,91 @@
+import gym
+from stable_baselines3 import PPO
+from stable_baselines3.ppo import MlpPolicy
+from stable_baselines3.common.evaluation import evaluate_policy
+from stable_baselines3.common.policies import ActorCriticPolicy
+
+import mujoco_py
+import sys
+
+import imitation.data
+from imitation.data import rollout
+from imitation.data.wrappers import RolloutInfoWrapper
+from stable_baselines3.common.vec_env import DummyVecEnv
+
+from imitation.algorithms import bc
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+env = gym.make("Ant-v2")
+
+#=============
+
+expert = PPO.load('Ant_expert3M_lr4_batch128', env=env)
+
+def clone():
+  expert = PPO.load("Ant_expert3M_lr4_batch128", env = env)
+  episodes = [500, 1000, 5000, 10000, 50000, 100000, 500000]
+  reward_after_training = []
+  std_list = []
+
+  for x in episodes:
+    terminate = rollout.min_timesteps(n=x)
+    data= rollout.generate_trajectories(expert, 
+                                      DummyVecEnv([lambda: RolloutInfoWrapper(env)]), terminate)
+
+    transitions = rollout.flatten_trajectories(data)
+    
+    bc_trainer = bc.BC(
+        observation_space=env.observation_space,
+        action_space=env.action_space,
+        expert_data=transitions,)
+    
+    reward_before_training, _ = evaluate_policy(bc_trainer.policy, env, 10)
+    print(f"Reward before training: {reward_before_training}")
+
+    bc_trainer.train(n_epochs=100)
+
+    reward, std = evaluate_policy(bc_trainer.policy, env, n_eval_episodes=10, render=False)
+    print(f"Reward after training: {reward}")
+    reward_after_training.append(reward)
+    std_list.append(std)
+    print("=============================")  
+
+  print(reward_after_training)
+  print(std_list)
+
+#=============
+
+def clone2():
+  episodes = [50, 100, 500, 1000, 1500, 5000]
+  reward_after_training = []
+  std_list = []
+  
+  for x in episodes:
+    terminate = rollout.min_timesteps(n=x)
+    data = rollout.generate_trajectories(expert, 
+                                      DummyVecEnv([lambda: RolloutInfoWrapper(env)]), terminate)
+
+    transitions = rollout.flatten_trajectories(data)
+    
+    bc_trainer = bc.BC(
+        observation_space=env.observation_space,
+        action_space=env.action_space,
+        expert_data=transitions,
+        policy_class=ActorCriticPolicy,
+        policy_kwargs= {'net_arch':[128, dict(pi=[256], vf=[128])],
+                        'activation_fn':th.nn.ReLU})
+    #print(bc_trainer.policy)
+    #break
+    reward_before_training, _ = evaluate_policy(bc_trainer.policy, env, 10)
+    print(f"Reward before training: {reward_before_training}")
+
+    bc_trainer.train(n_epochs=100)
+
+    reward, std = evaluate_policy(bc_trainer.policy, env, n_eval_episodes=10, render=False)
+    reward_after_training.append(reward)
+    print(f"Reward after training: {reward}")
+  print(reward_after_training)
+  std_list.append(std)
+ 
