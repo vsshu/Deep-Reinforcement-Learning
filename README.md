@@ -9,9 +9,13 @@ The different reward configurations resulted in three distincs agents.
 ### McQueen
 <img src="https://i.dlpng.com/static/png/6345336_preview.png" width="100">
 
+--------
 ### Fillmore
-<img src="https://static.wikia.nocookie.net/worldofcarsdrivein/images/d/d0/Fillmore.png/revision/latest?cb=20111006075558" width="100">![Fillmore](https://user-images.githubusercontent.com/89097375/174461057-bba579bf-ba4f-4a0c-8d19-4cd24a3c5fef.gif)
+<img src="https://static.wikia.nocookie.net/worldofcarsdrivein/images/d/d0/Fillmore.png/revision/latest?cb=20111006075558" width="100"> ![Fill sq](https://user-images.githubusercontent.com/89097375/174484688-8b81b8f6-108a-4192-94ed-8799859d399e.gif)
 
+---------
 ### Lizzie
-<img src="https://static.wikia.nocookie.net/disney/images/3/31/Lizzie.png/revision/latest?cb=20151222133758" width="100">
+<img src="https://static.wikia.nocookie.net/disney/images/3/31/Lizzie.png/revision/latest?cb=20151222133758" width="100"> ![Liz sq](https://user-images.githubusercontent.com/89097375/174484694-8132d595-c016-439f-a8b2-c3b9b59ca766.gif)
+
+
 
