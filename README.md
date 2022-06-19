@@ -8,7 +8,9 @@ The different reward configurations resulted in three distincs agents.
 
 ![McQueen](https://i.dlpng.com/static/png/6345336_preview.png)
 
-![Fillmore](https://celebrity.fm/wp-content/uploads/2022/02/What-does-Fillmore-do-in-Cars.png) 
+![Fillmore](https://static.wikia.nocookie.net/pixar/images/d/d0/Fillmore.png/revision/latest?cb=20210922194732)
+https://static.wikia.nocookie.net/pixar/images/d/d0/Fillmore.png/revision/latest?cb=20210922194732
 
-![Lizzie](https://i.pinimg.com/originals/78/be/de/78bede5302d8b71fe9116adeb7a93a98.jpg)
+![Lizzie](https://static.wikia.nocookie.net/disney/images/3/31/Lizzie.png/revision/latest?cb=20151222133758)
+https://i.pinimg.com/originals/78/be/de/78bede5302d8b71fe9116adeb7a93a98.jpg)
 
