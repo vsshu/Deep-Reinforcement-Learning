@@ -8,7 +8,7 @@ The different reward configurations resulted in three distincs agents.
 
 ![McQueen](https://i.dlpng.com/static/png/6345336_preview.png)
 
-![Fillmore](https://static.wikia.nocookie.net/pixar/images/d/d0/Fillmore.png/revision/latest?cb=20210922194732)
+![Fillmore](https://p7.hiclipart.com/preview/840/330/545/the-fillmore-lightning-mcqueen-mater-car-car.jpg)
 https://static.wikia.nocookie.net/pixar/images/d/d0/Fillmore.png/revision/latest?cb=20210922194732
 
 ![Lizzie](https://static.wikia.nocookie.net/disney/images/3/31/Lizzie.png/revision/latest?cb=20151222133758)
