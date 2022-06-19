@@ -4,10 +4,10 @@ Deep Reinforcement Learning Assignment, Spring 2022, Tilburg University, Departm
 The assignment was composed of two parts. In the first part, the effect of changing the reward function in a simplified self-driving car environment was explored. In the second part, tasks involving Imitation Learning and Behavior Cloning were investigated. 
 
 ## Part 1
-The different reward configurations resulted in three distincs agents. 
+The different reward configurations resulted in three distincs agent behaviors. 
 
 ### McQueen
-<img src="https://i.dlpng.com/static/png/6345336_preview.png" width="100">
+<img src="https://i.dlpng.com/static/png/6345336_preview.png" width="100"> ![Queen sq](https://user-images.githubusercontent.com/89097375/174493309-7841db5f-f057-4267-99fc-9953ae6d09ae.gif)
 
 --------
 ### Fillmore
